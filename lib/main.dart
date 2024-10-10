@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:getroute_navbar/bindings/bindings.dart';
+import 'package:getroute_navbar/routes/app_routes.dart';
 import 'package:getroute_navbar/screen/nav_bar/main_bottom_nav_bar.dart';
 
 void main() {
@@ -14,6 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialRoute: AppRoute.getNavBarRoute(),
+      getPages: AppRoute.routes,
       initialBinding: MainBinding(),
       home: const MainBottomNavBar(),
     );

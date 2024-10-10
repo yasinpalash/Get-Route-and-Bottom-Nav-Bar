@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getroute_navbar/screen/screen_2/screen_2.dart';
 import 'package:getroute_navbar/screen/screen_3/screen_3.dart';
-import 'package:getroute_navbar/screen/screen_one/screen_one.dart';
 
+import '../home_screen/screen_one.dart';
 import 'main_bottom_nav_bar_controller.dart';
 
 class MainBottomNavBar extends StatelessWidget {
   const MainBottomNavBar({super.key});
 
   final List<Widget> screens = const [
-    ScreenOne(),
+    HomeScreen(),
     Screen2(),
     Screen3(),
   ];
