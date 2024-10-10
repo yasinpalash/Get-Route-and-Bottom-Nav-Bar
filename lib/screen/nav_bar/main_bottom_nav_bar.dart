@@ -21,24 +21,25 @@ class MainBottomNavBar extends StatelessWidget {
       body: GetX<MainBottomNavBarController>(
         builder: (bottomController) => screens[bottomController.currentIndex],
       ),
-      bottomNavigationBar:
-          GetX<MainBottomNavBarController>(builder: (bottomController) {
-        return BottomNavigationBar(
-          currentIndex: bottomController.currentIndex,
-          selectedItemColor: Colors.red,
-          unselectedItemColor: Colors.grey,
-          showUnselectedLabels: true,
-          onTap: bottomController.changeIndex,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard), label: 'Categories'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart), label: 'Carts'),
-          ],
-        );
-      }),
+      bottomNavigationBar: GetX<MainBottomNavBarController>(
+        builder: (bottomController) {
+          return BottomNavigationBar(
+            currentIndex: bottomController.currentIndex,
+            selectedItemColor: Colors.red,
+            unselectedItemColor: Colors.grey,
+            showUnselectedLabels: true,
+            onTap: bottomController.changeIndex,
+            items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home_filled), label: 'Home'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.dashboard), label: 'Categories'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.shopping_cart), label: 'Carts'),
+            ],
+          );
+        },
+      ),
     );
   }
 }
